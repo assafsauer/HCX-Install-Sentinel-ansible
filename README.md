@@ -4,9 +4,8 @@
 make sure user have all privilage and NOPASSWD 
 
 asauer@asauer-VirtualBox:/tmp$ sudo cat /etc/sudoers | grep asauer
-asauer ALL=(ALL) NOPASSWD:ALL
-asauer@asauer-VirtualBox:/tmp$ 
 
+asauer ALL=(ALL) NOPASSWD:ALL
 
 
 #### install agent on ubuntu18_group ####
