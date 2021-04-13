@@ -1,0 +1,15 @@
+---
+
+ - name: talk to all hosts just so we can learn about them
+   hosts: ubuntu18_group
+   tasks:
+    - copy:
+        src: /Users/sauera/Downloads/iso_http_download/interconnect-1-SGW-I1-linux-sentinel-installer.sh
+        dest: /tmp/interconnect-1-SGW-I1-linux-sentinel-installer.sh
+    - expect:
+      become: yes
+      become_method: sudo
+      args:
+        command: "sudo bash /tmp/interconnect-1-SGW-I1-linux-sentinel-installer.sh"
+        responses:
+          "[y/n]": "y"
