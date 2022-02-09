@@ -1,0 +1,22 @@
+More detailed response:
+>>>>>>>>>>>>>>>>>>>>>>>> 
+Here are the steps to be followed for the workaround:
+1.       Login to SDR
+a.       Login to cloud-manager using “ssh admin@<cloud-manager>”
+b.       Run “ccli”
+c.       List the appliances and get the id of SDR “list”
+d.       Load the SDR context “go <sdr-id>”
+e.       Ssh to SDR “ssh”
+ 
+2.       Create a folder for 7.9 and create a symlink to 7/7/bin by running the following commands:
+ 
+mkdir -p /opt/vmware/sdr-tools/centos/7/9
+chmod 0755 /opt/vmware/sdr-tools/centos/7/9
+cd /opt/vmware/sdr-tools/centos/7/9
+ln -s ../7/bin bin
+ 
+3.       Make sure the symlink lists all the files under 7/9/bin
+ 
+ls -l /opt/vmware/sdr-tools/centos/7/9/
+ls -l /opt/vmware/sdr-tools/centos/7/9/bin/
+ 
